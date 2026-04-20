@@ -251,7 +251,7 @@ main { padding: 32px; max-width: 1200px; margin: 0 auto; }
       <div class="divider"></div>
       <div class="setting-group" style="margin-bottom:0">
         <label class="setting-label">Model Engine</label>
-        <div class="setting-desc" style="margin-bottom:0">Powered by <span style="color:var(--gold-main);font-weight:600">claude-sonnet-4-6</span> for PDF extraction and screenshot OCR.</div>
+        <div class="setting-desc" style="margin-bottom:0">Powered by <span style="color:var(--gold-main);font-weight:600">claude-opus-4-7</span> for PDF extraction and screenshot OCR.</div>
       </div>
     </div>
     <div class="modal-footer">
@@ -327,7 +327,7 @@ async function callClaude(messages, maxTokens=2000, logFn=null) {
           'x-api-key': apiKey,
           'anthropic-version': '2023-06-01',
         },
-        body: JSON.stringify({ model:'claude-sonnet-4-6', max_tokens:maxTokens, messages })
+        body: JSON.stringify({ model:'claude-opus-4-7', max_tokens:maxTokens, messages })
       });
 
       const rawText = await response.text();
